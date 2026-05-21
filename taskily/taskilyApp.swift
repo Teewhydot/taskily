@@ -6,12 +6,26 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct taskilyApp: App {
+    @AppStorage("selectedTheme") var selectedTheme = "System"
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationStack{
+                ContentView()
+                    .modelContainer(for: TaskModel.self)
+
+                    .navigationDestination(for: TaskModel.self) { task in
+                        TaskDetail(task: task)
+                    }
+                    .preferredColorScheme(
+                        selectedTheme == "Light" ? .light: selectedTheme == "Dark" ? .dark : nil )
+            }
         }
+
     }
-}
+    }
+   
+

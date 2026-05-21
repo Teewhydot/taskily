@@ -10,12 +10,15 @@ import SwiftUI
 struct TaskListShell: View {
     var body: some View {
         TabView {
-            Tab("List",systemImage: "list.bullet") {}
-            Tab("Feed",systemImage: "film.stack") {}
-            Tab("Settings",systemImage: "gear") {}
-
+            Tab("List",systemImage: "list.bullet") {
+                TaskList()
+                  
+            }
+          
+            Tab("Settings",systemImage: "gear") {
+                SettingsView()
+            }
         }
-        .padding()
     }
 }
 
