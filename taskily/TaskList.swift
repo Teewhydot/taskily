@@ -101,7 +101,7 @@ struct TaskList: View {
                             ForEach(filteredTasks, id: \.id) { task in
                                 NavigationLink(value: task) {
                                     TaskCard(task: task)
-                                }
+                                }.tint(.primary)
                             }
                         }
                     }

@@ -14,12 +14,48 @@ struct AddTaskView: View {
     @State private var selectedDate: Date = Date.now
     @AppStorage("selectedPriority") var selectedPriority = Priority.low
     @Environment(\.modelContext) private var modelContext
+    @Environment(\.dismiss) private var dismiss
+
 
 
     enum Priority: String, CaseIterable {
         case low = "Low"
         case medium = "Medium"
         case high = "High"
+    }
+    private func saveTask() {
+        let trimmedTitle = newTaskTitle.trimmingCharacters(in: .whitespaces)
+        guard !trimmedTitle.isEmpty else { return }
+        
+        // Map your Priority enum to TaskModel's TaskPriority
+        let taskPriority: TaskPriority
+        switch selectedPriority {
+        case .low:
+            taskPriority = .low
+        case .medium:
+            taskPriority = .medium
+        case .high:
+            taskPriority = .high
+        }
+        
+        let newTask = TaskModel(
+            title: trimmedTitle,
+            desc: newTaskDesc,
+            dueDate: selectedDate,
+            postedDate: Date(),    // current timestamp
+            isCompleted: false,
+            taskPriority: taskPriority
+        )
+        
+        modelContext.insert(newTask)
+        
+        do {
+            try modelContext.save()
+            dismiss()
+        } catch {
+            print("Failed to save task: \(error)")
+            // Show an alert if you want
+        }
     }
     private func AddTaskRow<Trailing: View>(icon: String, leadingColor: Color, title: String, @ViewBuilder suffixWidget: () -> Trailing) -> some View {
         HStack(spacing: 12){
@@ -41,13 +77,13 @@ struct AddTaskView: View {
         VStack{
             HStack{
                 Button("Cancel") {
-                    
+                    dismiss()
                 }
                 Spacer()
                 Text("New Task")
                 Spacer()
                 Button("Save") {
-                    
+                    saveTask()
                 }
                 
             }.padding()

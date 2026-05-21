@@ -9,7 +9,7 @@ import Foundation
 import SwiftData
 
 // Must be RawRepresentable and Codable for SwiftData
-enum TaskPriority: String, Codable {
+enum TaskPriority: String, Codable,CaseIterable {
     case low
     case medium
     case high
