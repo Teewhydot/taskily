@@ -6,10 +6,13 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct TaskDetail: View {
     let task: TaskModel
-    @Environment(\  .dismiss) private var dismiss
+    @Environment(\.modelContext) private var modelContext
+
+    @Environment(\.dismiss) private var dismiss
     @State private var selectedDate: Date = Date.now
     @AppStorage("selectedPriority") var selectedPriority = Priority.low
     
@@ -19,6 +22,16 @@ struct TaskDetail: View {
         case medium = "Medium"
         case high = "High"
     }
+    private func toggleCompletion(_ task: TaskModel) {
+            task.isCompleted.toggle()
+            try? modelContext.save()
+        }
+        
+        private func deleteTask() {
+            modelContext.delete(task)
+
+            try? modelContext.save()
+        }
     private func AddTaskRow<Trailing: View>(icon: String, leadingColor: Color, title: String, @ViewBuilder suffixWidget: () -> Trailing) -> some View {
         HStack(spacing: 12){
             Image(systemName: icon)
@@ -56,6 +69,9 @@ struct TaskDetail: View {
                 .background(.gray)
                 .cornerRadius(10)
                 .padding()
+                .onTapGesture {
+                    toggleCompletion(task)
+                }
             
             
             
@@ -93,7 +109,7 @@ struct TaskDetail: View {
                 .padding(.bottom,30)
             Button("Delete Task",role: .destructive)
             {
-                
+               deleteTask()
             }.frame(maxWidth: .infinity).padding().background(.button).cornerRadius(10).padding()
             Spacer()
             

@@ -6,12 +6,15 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct AddTaskView: View {
     @State private var newTaskTitle = ""
     @State private var newTaskDesc = ""
     @State private var selectedDate: Date = Date.now
     @AppStorage("selectedPriority") var selectedPriority = Priority.low
+    @Environment(\.modelContext) private var modelContext
+
 
     enum Priority: String, CaseIterable {
         case low = "Low"
