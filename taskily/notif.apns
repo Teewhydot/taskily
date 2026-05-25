@@ -1,0 +1,10 @@
+{
+    "Simulator Target Bundle": "ng.com.sirteefyapps.taskily",
+    "aps": {
+        "alert": {
+            "title": "Test",
+            "body": "Hello from sim"
+        },
+        "badge": 1
+    }
+}

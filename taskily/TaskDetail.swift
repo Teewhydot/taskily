@@ -9,7 +9,7 @@ import SwiftUI
 import SwiftData
 
 struct TaskDetail: View {
-    @Bindable var task: TaskModel          // 👈 Changed from 'let' to '@Bindable var'
+    @Bindable var task: TaskModel
     @Environment(\.modelContext) private var modelContext
     @Environment(\.dismiss) private var dismiss
     
@@ -21,7 +21,23 @@ struct TaskDetail: View {
     }
     
     private func deleteTask() {
-        modelContext.delete(task)
+        // Use the task's own context if available
+        if let ownContext = task.modelContext, !task.isDeleted {
+            ownContext.delete(task)
+            try? ownContext.save()
+            dismiss()
+            return
+        }
+        
+        // Fallback: use environment context and re-fetch by ID
+        let id = task.id
+        let predicate = #Predicate<TaskModel> { $0.id == id }
+        let descriptor = FetchDescriptor(predicate: predicate)
+        guard let managedTask = try? modelContext.fetch(descriptor).first else {
+            print("Could not find task to delete")
+            return
+        }
+        modelContext.delete(managedTask)
         try? modelContext.save()
         dismiss()
     }

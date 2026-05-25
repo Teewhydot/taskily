@@ -12,8 +12,8 @@ struct TaskListShell: View {
         TabView {
             Tab("List",systemImage: "list.bullet") {
                 TaskList()
-                  
             }
+    
           
             Tab("Settings",systemImage: "gear") {
                 SettingsView()

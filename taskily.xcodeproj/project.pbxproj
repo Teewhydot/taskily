@@ -7,17 +7,101 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		419F21DC2FB0B40F00E01F26 /* Inject in Frameworks */ = {isa = PBXBuildFile; productRef = 419F21DB2FB0B40F00E01F26 /* Inject */; };
+		41AB7A442FC19E6000B43493 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41AB7A432FC19E6000B43493 /* WidgetKit.framework */; };
+		41AB7A462FC19E6000B43493 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41AB7A452FC19E6000B43493 /* SwiftUI.framework */; };
+		41AB7A512FC19E6100B43493 /* TaskilyWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 41AB7A412FC19E6000B43493 /* TaskilyWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		41E99F6C2FBF47BC001F6AAC /* FirebaseAppDistribution-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 41E99F6B2FBF47BC001F6AAC /* FirebaseAppDistribution-Beta */; };
+		41E99F6E2FBF47BC001F6AAC /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 41E99F6D2FBF47BC001F6AAC /* FirebaseCore */; };
+		41E99F702FBF47BC001F6AAC /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 41E99F6F2FBF47BC001F6AAC /* FirebaseDatabase */; };
+		41E99F722FBF47BC001F6AAC /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 41E99F712FBF47BC001F6AAC /* FirebaseFirestore */; };
+		41E99F742FBF47BC001F6AAC /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = 41E99F732FBF47BC001F6AAC /* FirebaseFunctions */; };
+		41E99F762FBF47BC001F6AAC /* FirebaseFunctionsCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 41E99F752FBF47BC001F6AAC /* FirebaseFunctionsCombine-Community */; };
+		41E99F782FBF47BC001F6AAC /* FirebaseInAppMessaging-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 41E99F772FBF47BC001F6AAC /* FirebaseInAppMessaging-Beta */; };
+		41E99F7A2FBF47BC001F6AAC /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 41E99F792FBF47BC001F6AAC /* FirebaseMessaging */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		41AB7A4F2FC19E6100B43493 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 414E1D7E2FAE0271009E691A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 41AB7A402FC19E6000B43493;
+			remoteInfo = TaskilyWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		41AB7A382FC1136A00B43493 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				41AB7A512FC19E6100B43493 /* TaskilyWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		414E1D862FAE0271009E691A /* taskily.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = taskily.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		41AB7A412FC19E6000B43493 /* TaskilyWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TaskilyWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		41AB7A432FC19E6000B43493 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		41AB7A452FC19E6000B43493 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		41AB7A582FC1A17A00B43493 /* TaskilyWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TaskilyWidgetExtension.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		4184B85A2FC1CD910037801F /* Exceptions for "taskily" folder in "taskily" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 414E1D852FAE0271009E691A /* taskily */;
+		};
+		41AB7A522FC19E6100B43493 /* Exceptions for "TaskilyWidget" folder in "TaskilyWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 41AB7A402FC19E6000B43493 /* TaskilyWidgetExtension */;
+		};
+		41AB7A572FC19E9100B43493 /* Exceptions for "TaskilyWidget" folder in "taskily" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				AddTaskIntent.swift,
+				TaskilyWidget.swift,
+			);
+			target = 414E1D852FAE0271009E691A /* taskily */;
+		};
+		41AB7A5C2FC1B1A100B43493 /* Exceptions for "taskily" folder in "TaskilyWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				SharedTaskContainer.swift,
+				TaskModel.swift,
+			);
+			target = 41AB7A402FC19E6000B43493 /* TaskilyWidgetExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		414E1D882FAE0271009E691A /* taskily */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				4184B85A2FC1CD910037801F /* Exceptions for "taskily" folder in "taskily" target */,
+				41AB7A5C2FC1B1A100B43493 /* Exceptions for "taskily" folder in "TaskilyWidgetExtension" target */,
+			);
 			path = taskily;
+			sourceTree = "<group>";
+		};
+		41AB7A472FC19E6000B43493 /* TaskilyWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				41AB7A572FC19E9100B43493 /* Exceptions for "TaskilyWidget" folder in "taskily" target */,
+				41AB7A522FC19E6100B43493 /* Exceptions for "TaskilyWidget" folder in "TaskilyWidgetExtension" target */,
+			);
+			path = TaskilyWidget;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -27,7 +111,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				419F21DC2FB0B40F00E01F26 /* Inject in Frameworks */,
+				41E99F7A2FBF47BC001F6AAC /* FirebaseMessaging in Frameworks */,
+				41E99F762FBF47BC001F6AAC /* FirebaseFunctionsCombine-Community in Frameworks */,
+				41E99F6E2FBF47BC001F6AAC /* FirebaseCore in Frameworks */,
+				41E99F782FBF47BC001F6AAC /* FirebaseInAppMessaging-Beta in Frameworks */,
+				41E99F702FBF47BC001F6AAC /* FirebaseDatabase in Frameworks */,
+				41E99F742FBF47BC001F6AAC /* FirebaseFunctions in Frameworks */,
+				41E99F722FBF47BC001F6AAC /* FirebaseFirestore in Frameworks */,
+				41E99F6C2FBF47BC001F6AAC /* FirebaseAppDistribution-Beta in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		41AB7A3E2FC19E6000B43493 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41AB7A462FC19E6000B43493 /* SwiftUI.framework in Frameworks */,
+				41AB7A442FC19E6000B43493 /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -37,7 +137,10 @@
 		414E1D7D2FAE0271009E691A = {
 			isa = PBXGroup;
 			children = (
+				41AB7A582FC1A17A00B43493 /* TaskilyWidgetExtension.entitlements */,
 				414E1D882FAE0271009E691A /* taskily */,
+				41AB7A472FC19E6000B43493 /* TaskilyWidget */,
+				41AB7A422FC19E6000B43493 /* Frameworks */,
 				414E1D872FAE0271009E691A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -46,8 +149,18 @@
 			isa = PBXGroup;
 			children = (
 				414E1D862FAE0271009E691A /* taskily.app */,
+				41AB7A412FC19E6000B43493 /* TaskilyWidgetExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		41AB7A422FC19E6000B43493 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				41AB7A432FC19E6000B43493 /* WidgetKit.framework */,
+				41AB7A452FC19E6000B43493 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -60,21 +173,52 @@
 				414E1D822FAE0271009E691A /* Sources */,
 				414E1D832FAE0271009E691A /* Frameworks */,
 				414E1D842FAE0271009E691A /* Resources */,
+				41AB7A382FC1136A00B43493 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				41AB7A502FC19E6100B43493 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				414E1D882FAE0271009E691A /* taskily */,
 			);
 			name = taskily;
 			packageProductDependencies = (
-				419F21DB2FB0B40F00E01F26 /* Inject */,
+				41E99F6B2FBF47BC001F6AAC /* FirebaseAppDistribution-Beta */,
+				41E99F6D2FBF47BC001F6AAC /* FirebaseCore */,
+				41E99F6F2FBF47BC001F6AAC /* FirebaseDatabase */,
+				41E99F712FBF47BC001F6AAC /* FirebaseFirestore */,
+				41E99F732FBF47BC001F6AAC /* FirebaseFunctions */,
+				41E99F752FBF47BC001F6AAC /* FirebaseFunctionsCombine-Community */,
+				41E99F772FBF47BC001F6AAC /* FirebaseInAppMessaging-Beta */,
+				41E99F792FBF47BC001F6AAC /* FirebaseMessaging */,
 			);
 			productName = taskily;
 			productReference = 414E1D862FAE0271009E691A /* taskily.app */;
 			productType = "com.apple.product-type.application";
+		};
+		41AB7A402FC19E6000B43493 /* TaskilyWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 41AB7A532FC19E6100B43493 /* Build configuration list for PBXNativeTarget "TaskilyWidgetExtension" */;
+			buildPhases = (
+				41AB7A3D2FC19E6000B43493 /* Sources */,
+				41AB7A3E2FC19E6000B43493 /* Frameworks */,
+				41AB7A3F2FC19E6000B43493 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				41AB7A472FC19E6000B43493 /* TaskilyWidget */,
+			);
+			name = TaskilyWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = TaskilyWidgetExtension;
+			productReference = 41AB7A412FC19E6000B43493 /* TaskilyWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -89,6 +233,9 @@
 					414E1D852FAE0271009E691A = {
 						CreatedOnToolsVersion = 26.3;
 					};
+					41AB7A402FC19E6000B43493 = {
+						CreatedOnToolsVersion = 26.3;
+					};
 				};
 			};
 			buildConfigurationList = 414E1D812FAE0271009E691A /* Build configuration list for PBXProject "taskily" */;
@@ -101,7 +248,7 @@
 			mainGroup = 414E1D7D2FAE0271009E691A;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				419F21DA2FB0B40F00E01F26 /* XCRemoteSwiftPackageReference "Inject" */,
+				41E99F6A2FBF47BC001F6AAC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 414E1D872FAE0271009E691A /* Products */;
@@ -109,12 +256,20 @@
 			projectRoot = "";
 			targets = (
 				414E1D852FAE0271009E691A /* taskily */,
+				41AB7A402FC19E6000B43493 /* TaskilyWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		414E1D842FAE0271009E691A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		41AB7A3F2FC19E6000B43493 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -131,7 +286,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		41AB7A3D2FC19E6000B43493 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		41AB7A502FC19E6100B43493 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 41AB7A402FC19E6000B43493 /* TaskilyWidgetExtension */;
+			targetProxy = 41AB7A4F2FC19E6100B43493 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		414E1D8F2FAE0271009E691A /* Debug */ = {
@@ -255,6 +425,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = taskily/taskily.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = LS988NT5HQ;
@@ -263,6 +434,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = taskily/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -303,6 +475,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = taskily/taskily.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = LS988NT5HQ;
@@ -311,6 +484,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = taskily/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -346,6 +520,73 @@
 			};
 			name = Release;
 		};
+		41AB7A542FC19E6100B43493 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = TaskilyWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LS988NT5HQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TaskilyWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TaskilyWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ng.com.sirteefyapps.taskily.TaskilyWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		41AB7A552FC19E6100B43493 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = TaskilyWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LS988NT5HQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TaskilyWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TaskilyWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ng.com.sirteefyapps.taskily.TaskilyWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -367,24 +608,68 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		41AB7A532FC19E6100B43493 /* Build configuration list for PBXNativeTarget "TaskilyWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				41AB7A542FC19E6100B43493 /* Debug */,
+				41AB7A552FC19E6100B43493 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		419F21DA2FB0B40F00E01F26 /* XCRemoteSwiftPackageReference "Inject" */ = {
+		41E99F6A2FBF47BC001F6AAC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/krzysztofzablocki/Inject.git";
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.6.0;
+				minimumVersion = 12.13.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		419F21DB2FB0B40F00E01F26 /* Inject */ = {
+		41E99F6B2FBF47BC001F6AAC /* FirebaseAppDistribution-Beta */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 419F21DA2FB0B40F00E01F26 /* XCRemoteSwiftPackageReference "Inject" */;
-			productName = Inject;
+			package = 41E99F6A2FBF47BC001F6AAC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseAppDistribution-Beta";
+		};
+		41E99F6D2FBF47BC001F6AAC /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 41E99F6A2FBF47BC001F6AAC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		41E99F6F2FBF47BC001F6AAC /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 41E99F6A2FBF47BC001F6AAC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		41E99F712FBF47BC001F6AAC /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 41E99F6A2FBF47BC001F6AAC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		41E99F732FBF47BC001F6AAC /* FirebaseFunctions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 41E99F6A2FBF47BC001F6AAC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFunctions;
+		};
+		41E99F752FBF47BC001F6AAC /* FirebaseFunctionsCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 41E99F6A2FBF47BC001F6AAC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFunctionsCombine-Community";
+		};
+		41E99F772FBF47BC001F6AAC /* FirebaseInAppMessaging-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 41E99F6A2FBF47BC001F6AAC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseInAppMessaging-Beta";
+		};
+		41E99F792FBF47BC001F6AAC /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 41E99F6A2FBF47BC001F6AAC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
